@@ -51,24 +51,20 @@ export interface SiteConfig {
 }
 
 export const SITE: SiteConfig = {
-  author: 'Astronaut',
-  desc: 'Developer and designer building premium web experiences.',
-  title: 'Spaceship',
+  author: 'Rosie',
+  desc: 'Developer blog powered by Astro and GitHub Pages.',
+  title: 'Rosie Blog',
   ogImage: 'og.png',
-  lang: 'en-US',
+  lang: 'ko-KR',
   base: '/',
-  website: 'https://spaceship-one.vercel.app',
+  website: 'https://rosie-pluglink.github.io',
   social: {
-    x: 'https://x.com/astronaut',
-    github: 'https://github.com/astronaut',
-    telegram: 'https://t.me/astronaut',
-    facebook: 'https://facebook.com/astronaut',
+    github: 'https://github.com/rosie-pluglink',
   },
   googleAnalyticsId: '', // Example: 'G-XXXXXXXXXX'
-  homeHeroDescription:
-    'Building premium web experiences with Astro, Svelte, and Tailwind. Focused on performance, aesthetics, and clean code. I am currently working on open-source tools and sharing my journey through writing.',
+  homeHeroDescription: 'Welcome to my blog. Sharing thoughts, tutorials, and projects.',
   blogDescription: 'A collection of thoughts, tutorials, and general web discovery.',
-  projectsDescription: 'Things I’ve built that I’m proud of. Many of them are open-source.',
+  projectsDescription: "Things I've built that I'm proud of. Many of them are open-source.",
 
   // Homepage post counts
   featuredPostsCount: 3,
@@ -95,7 +91,7 @@ export const SITE: SiteConfig = {
   // Get your configuration from https://giscus.app
   comments: {
     enabled: false, // Set to true after filling in the IDs below
-    repo: 'alec-c4/spaceship', // Your GitHub repository
+    repo: 'rosie-pluglink/rosie-pluglink.github.io', // Your GitHub repository
     repoId: '', // Get from https://giscus.app - enter repo above and copy the value
     category: 'General', // GitHub Discussions category name
     categoryId: '', // Get from https://giscus.app - select category and copy the value

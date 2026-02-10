@@ -45,7 +45,7 @@ function createTheme() {
   if (typeof window !== 'undefined') {
     const savedTheme = localStorage.getItem('theme') as Theme | null;
     const initialTheme =
-      savedTheme && ['light', 'dark', 'system'].includes(savedTheme) ? savedTheme : 'system';
+      savedTheme && ['light', 'dark', 'system'].includes(savedTheme) ? savedTheme : 'light';
     theme = initialTheme;
     applyTheme(initialTheme);
   }
