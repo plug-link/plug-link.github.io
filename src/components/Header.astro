@@ -1,5 +1,4 @@
 ---
-import { SITE } from '@/config';
 import ThemeToggle from '@/components/ThemeToggle.svelte';
 import Search from '@/components/Search.svelte';
 
@@ -9,46 +8,126 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { name: 'Posts', href: '/posts' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Appearances', href: '/appearances' },
-  { name: 'About', href: '/about' },
+  { name: 'Engineering', href: '/posts/tag/engineering' },
+  { name: 'Design', href: '/posts/tag/design' },
+  { name: 'Product', href: '/posts/tag/product' },
+  { name: 'Culture', href: '/posts/tag/culture' },
 ];
 ---
 
 <header
-  class="sticky top-0 z-50 backdrop-blur-md bg-background/80 flex flex-col lg:flex-row items-center justify-between py-4 sm:py-5 gap-4 border-b border-border transition-all duration-300"
+  class="sticky top-0 z-50 backdrop-blur-xl bg-background/90 border-b border-border/60 transition-all duration-300"
 >
-  <div class="flex items-center justify-between w-full lg:w-auto">
-    <a
-      href="/"
-      class="text-xl sm:text-2xl font-black tracking-normal text-foreground transition-all no-underline hover:text-primary whitespace-nowrap"
-    >
-      {SITE.title}
-    </a>
-    <div class="flex items-center gap-2 lg:hidden">
-      <Search client:idle />
-      <ThemeToggle client:idle />
+  <div class="max-w-5xl 3xl:max-w-7xl mx-auto container-padding">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5 no-underline shrink-0 group">
+        <!-- PLUGLINK App Icon (Blue rounded square + white lightning P) -->
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 512 512"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition-transform group-hover:scale-105 rounded-md"
+        >
+          <rect width="512" height="512" rx="96" fill="#0066FF"></rect>
+          <path d="M196 80L120 280H185L155 432L360 210H275L320 80H196Z" fill="white"></path>
+          <path
+            d="M300 190C300 190 340 190 365 210C390 230 400 260 390 290C380 320 350 340 320 340H290"
+            stroke="white"
+            stroke-width="38"
+            stroke-linecap="round"
+            fill="none"></path>
+        </svg>
+        <span class="text-lg font-black tracking-tight text-foreground">
+          PLUGLINK <span class="font-medium text-muted-foreground">Tech</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-1">
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class="px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-all no-underline"
+            >
+              {link.name}
+            </a>
+          ))
+        }
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-2">
+        <Search client:idle />
+        <ThemeToggle client:idle />
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg hover:bg-accent transition-colors"
+          aria-label="메뉴 열기"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 
-  <nav class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full lg:w-auto">
-    <div class="flex items-center justify-center flex-wrap gap-x-2 gap-y-2 sm:gap-4">
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden border-t border-border/60 bg-background/95 backdrop-blur-xl"
+  >
+    <div class="max-w-5xl mx-auto container-padding py-4 flex flex-col gap-1">
       {
         navLinks.map((link) => (
           <a
             href={link.href}
-            class="px-1.5 py-1 rounded-md text-xs font-bold uppercase tracking-widest text-muted-foreground hover:bg-accent hover:text-primary transition-all shrink-0"
+            class="px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-all no-underline"
           >
             {link.name}
           </a>
         ))
       }
+      <div class="h-px bg-border/60 my-2"></div>
+      <a
+        href="/posts"
+        class="px-3 py-2.5 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-all no-underline"
+      >
+        전체 글
+      </a>
     </div>
-    <div class="hidden lg:block h-4 w-px bg-border"></div>
-    <div class="hidden lg:flex items-center gap-4">
-      <Search client:idle />
-      <ThemeToggle client:idle />
-    </div>
-  </nav>
+  </div>
 </header>
+
+<script>
+  function setupMobileMenu() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+
+  setupMobileMenu();
+  document.addEventListener('astro:after-swap', setupMobileMenu);
+</script>

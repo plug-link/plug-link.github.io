@@ -51,28 +51,32 @@ export interface SiteConfig {
 }
 
 export const SITE: SiteConfig = {
-  author: 'Rosie',
-  desc: 'Developer blog powered by Astro and GitHub Pages.',
-  title: 'Rosie Blog',
+  author: 'PLUGLINK',
+  desc: '플러그링크 팀이 만들어가는 기술과 경험을 공유합니다.',
+  title: 'PLUGLINK Tech',
   ogImage: 'og.png',
   lang: 'ko-KR',
   base: '/',
   website: 'https://rosie-pluglink.github.io',
   social: {
-    github: 'https://github.com/rosie-pluglink',
+    github: 'https://github.com/plug-link',
+    homepage: 'https://pluglink.kr',
+    blog: 'https://blog.naver.com/pluglink',
+    youtube: 'https://www.youtube.com/@pluglink',
+    instagram: 'https://instagram.com/pluglink_official',
   },
   googleAnalyticsId: '', // Example: 'G-XXXXXXXXXX'
-  homeHeroDescription: 'Welcome to my blog. Sharing thoughts, tutorials, and projects.',
-  blogDescription: 'A collection of thoughts, tutorials, and general web discovery.',
-  projectsDescription: "Things I've built that I'm proud of. Many of them are open-source.",
+  homeHeroDescription: '플러그링크 팀이 만들어가는 기술과 경험을 공유합니다.',
+  blogDescription: '플러그링크 엔지니어들이 직접 작성하는 기술 아티클',
+  projectsDescription: '플러그링크가 만들고 있는 프로덕트와 오픈소스 프로젝트',
 
   // Homepage post counts
   featuredPostsCount: 3,
-  latestPostsCount: 3,
+  latestPostsCount: 6,
 
   // Homepage projects
   homeProjects: {
-    enabled: true,
+    enabled: false,
     count: 4,
   },
 
@@ -100,6 +104,6 @@ export const SITE: SiteConfig = {
     emitMetadata: false,
     inputPosition: 'bottom',
     theme: 'preferred_color_scheme', // Automatically matches your site theme
-    lang: 'en',
+    lang: 'ko',
   },
 };

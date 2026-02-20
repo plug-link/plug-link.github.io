@@ -1,14 +1,9 @@
-# 💼 Hire me if you like this post
+# 플러그링크와 함께 성장하세요
 
-I'm available for **freelance projects** and **full-time opportunities**.
+혁신적인 기술로 세상을 연결하는 **플러그링크**에서 함께할 동료를 찾고 있습니다.
 
-Whether you need:
+- 도전적인 기술 과제
+- 자율적인 팀 문화
+- 빠른 성장 환경
 
-- A modern, performant website
-- Technical consultation
-- Code review and optimization
-- Or just want to chat about web development
-
-Let's build something amazing together!
-
-[Get in touch](mailto:astronaut@example.com)
+[채용 페이지 바로가기](https://pluglink.kr)

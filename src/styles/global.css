@@ -25,37 +25,41 @@
 }
 
 @theme {
-  /* 1. Core Colors */
+  /* 1. Core Colors - Pluglink Blue Branding */
   --color-background: #ffffff;
-  --color-foreground: #09090b;
+  --color-foreground: #191f28;
 
   --color-card: #ffffff;
-  --color-card-foreground: #09090b;
+  --color-card-foreground: #191f28;
 
   --color-popover: #ffffff;
-  --color-popover-foreground: #09090b;
+  --color-popover-foreground: #191f28;
 
-  --color-primary: #18181b;
-  --color-primary-foreground: #fafafa;
+  --color-primary: #0066ff;
+  --color-primary-foreground: #ffffff;
 
-  --color-secondary: #f4f4f5;
-  --color-secondary-foreground: #18181b;
+  --color-secondary: #f5f6f8;
+  --color-secondary-foreground: #191f28;
 
-  --color-muted: #f4f4f5;
-  --color-muted-foreground: #18181b; /* Zinc 900 for absolute contrast compliance */
+  --color-muted: #f5f6f8;
+  --color-muted-foreground: #6b7684;
 
-  --color-accent: #f4f4f5;
-  --color-accent-foreground: #18181b;
+  --color-accent: #f2f4f6;
+  --color-accent-foreground: #191f28;
 
   --color-destructive: #ef4444;
   --color-destructive-foreground: #fafafa;
 
-  --color-border: #e4e4e7;
-  --color-input: #e4e4e7;
-  --color-ring: #18181b;
+  --color-border: #e5e8eb;
+  --color-input: #e5e8eb;
+  --color-ring: #0066ff;
+
+  /* Pluglink brand color */
+  --color-pluglink-blue: #0066ff;
+  --color-pluglink-dark: #191f28;
 
   /* 2. Constants */
-  --font-sans: 'Outfit', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Outfit', 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   --radius-lg: 0.75rem;
   --radius-md: calc(0.75rem - 2px);
   --radius-sm: calc(0.75rem - 4px);
@@ -67,25 +71,25 @@
 
 @layer base {
   .dark {
-    --color-background: #212737;
-    --color-foreground: #eaedf3;
-    --color-card: #303446; /* Catppuccin Frappe Base */
-    --color-card-foreground: #eaedf3;
-    --color-popover: #303446;
-    --color-popover-foreground: #eaedf3;
-    --color-primary: #f2d5cf; /* Lighter accent for Catppuccin harmony */
-    --color-primary-foreground: #303446;
-    --color-secondary: #292c3c; /* Mantle */
-    --color-secondary-foreground: #eaedf3;
-    --color-muted: #303446;
-    --color-muted-foreground: #d1d5dc;
-    --color-accent: #292c3c;
-    --color-accent-foreground: #eaedf3;
+    --color-background: #14171f;
+    --color-foreground: #e4e8ee;
+    --color-card: #1c2029;
+    --color-card-foreground: #e4e8ee;
+    --color-popover: #1c2029;
+    --color-popover-foreground: #e4e8ee;
+    --color-primary: #3d8bff;
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #1c2029;
+    --color-secondary-foreground: #e4e8ee;
+    --color-muted: #1c2029;
+    --color-muted-foreground: #8b95a5;
+    --color-accent: #222730;
+    --color-accent-foreground: #e4e8ee;
     --color-destructive: #ef4444;
     --color-destructive-foreground: #fafafa;
-    --color-border: #494d64; /* Surface 1 */
-    --color-input: #494d64;
-    --color-ring: #f2d5cf;
+    --color-border: #2d3340;
+    --color-input: #2d3340;
+    --color-ring: #3d8bff;
   }
 
   /* Fluid Typography & Scaling */
@@ -110,8 +114,8 @@
   }
 
   *::selection {
-    background-color: var(--color-primary) !important;
-    color: var(--color-primary-foreground) !important;
+    background-color: #0066ff !important;
+    color: #ffffff !important;
   }
 
   body {
@@ -257,12 +261,12 @@
 .dark .shiki,
 .dark .astro-code {
   background-color: var(--shiki-dark-bg) !important;
-  border-color: #494d64 !important; /* Catppuccin Surface 1 */
+  border-color: #2d3340 !important;
 }
 
 .dark .prose {
-  --tw-prose-body: #d1d5dc;
-  --tw-prose-headings: #eaedf3;
+  --tw-prose-body: #b0b8c4;
+  --tw-prose-headings: #e4e8ee;
   --tw-prose-pre-bg: var(--shiki-dark-bg);
   --tw-prose-links: var(--color-foreground);
 }

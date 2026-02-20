@@ -1,6 +1,3 @@
-# I'm {author}, developer and designer.
+# 기술이 세상을 연결하는 방법
 
-Building premium web experiences with Astro, Svelte, and Tailwind.
-Focused on performance, aesthetics, and clean code.
-
-I am currently working on open-source tools and sharing my journey through writing.
+플러그링크 팀이 서비스를 만들며 겪은 기술적 도전과 해결 과정, 그리고 팀의 성장 이야기를 공유합니다.
