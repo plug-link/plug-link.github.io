@@ -65,6 +65,6 @@ export default [
     },
   },
   {
-    ignores: ['dist/', '.astro/', 'src/env.d.ts', 'tmp/'],
+    ignores: ['dist/', '.astro/', 'src/env.d.ts', 'tmp/', '.claude/'],
   },
 ];
