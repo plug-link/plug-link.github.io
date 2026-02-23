@@ -4,11 +4,20 @@
 
 서비스를 만들며 겪은 기술적 도전과 해결 과정, 팀의 성장 이야기를 공유합니다.
 
-## 🎨 테마
+## 🎨 Theme
 
 [Spaceship](https://github.com/alec-c4/spaceship) 템플릿을 기반으로 제작되었습니다.
 
-## ✨ 주요 기능
+## 🛠️ 기술 스택
+
+| 분류      | 기술                                       |
+| --------- | ------------------------------------------ |
+| Framework | [Astro 5](https://astro.build/)            |
+| UI        | [Svelte 5](https://svelte.dev/)            |
+| Styling   | [Tailwind CSS 4](https://tailwindcss.com/) |
+| Content   | Markdown / MDX                             |
+
+## ✨ Featrues
 
 - **🚀 고성능**: Astro 기반으로 최소한의 JavaScript와 빠른 로딩 속도 제공
 - **⚡ 최적화**:
