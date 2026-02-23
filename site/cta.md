@@ -6,4 +6,4 @@
 - 자율적인 팀 문화
 - 빠른 성장 환경
 
-[채용 페이지 바로가기](https://pluglink.kr)
+[채용 바로가기](https://team.pluglink.kr)
