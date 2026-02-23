@@ -57,7 +57,7 @@ export const SITE: SiteConfig = {
   ogImage: 'og.png',
   lang: 'ko-KR',
   base: '/',
-  website: 'https://rosie-pluglink.github.io',
+  website: 'https://plug-link.github.io',
   social: {
     github: 'https://github.com/plug-link',
     homepage: 'https://pluglink.kr',
@@ -95,7 +95,7 @@ export const SITE: SiteConfig = {
   // Get your configuration from https://giscus.app
   comments: {
     enabled: false, // Set to true after filling in the IDs below
-    repo: 'rosie-pluglink/rosie-pluglink.github.io', // Your GitHub repository
+    repo: 'plug-link/plug-link.github.io', // Your GitHub repository
     repoId: '', // Get from https://giscus.app - enter repo above and copy the value
     category: 'General', // GitHub Discussions category name
     categoryId: '', // Get from https://giscus.app - select category and copy the value
