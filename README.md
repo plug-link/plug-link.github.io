@@ -2,6 +2,12 @@
 
 **Astro 5**, **Svelte 5 Runes**, **Tailwind CSS 4** 기반의 플러그링크 기술 블로그입니다.
 
+서비스를 만들며 겪은 기술적 도전과 해결 과정, 팀의 성장 이야기를 공유합니다.
+
+## 🎨 테마
+
+[Spaceship](https://github.com/alec-c4/spaceship) 템플릿을 기반으로 제작되었습니다.
+
 ## ✨ 주요 기능
 
 - **🚀 고성능**: Astro 기반으로 최소한의 JavaScript와 빠른 로딩 속도 제공
