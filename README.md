@@ -1,206 +1,154 @@
-# Spaceship 🚀
+# 플러그링크 테크 블로그
 
-**Spaceship** is a high-performance, premium blog and portfolio template built with **Astro 5**, **Svelte 5 Runes**, and **Tailwind CSS 4**. It is designed for developers and designers who want a modern, ultra-fast, and SEO-optimized web experience.
+**Astro 5**, **Svelte 5 Runes**, **Tailwind CSS 4** 기반의 플러그링크 기술 블로그입니다.
 
-## ✨ Features
+## ✨ 주요 기능
 
-- **🚀 High Performance**: Built with Astro for lightning-fast speeds and minimal JavaScript.
-- **⚡ Optimizations**:
-  - **Partytown**: Google Analytics is offloaded to web workers.
-  - **Loading Indicator**: Smooth progress bar for better navigation UX.
-- **🎨 Modern Design**: Clean aesthetics with dark mode support and fluid typography.
-- **Svelte 5 Runes**: Leveraging the latest Svelte reactivity system (`$state`, `$derived`, `$props`).
-- **Tailwind CSS 4**: Next-gen CSS framework for high performance and zero-runtime.
-- **📝 Interactive Blog**:
-  - **MDX Support**: Embed Svelte components directly in your posts.
-  - **Series Support**: Group related posts into a series with automatic navigation.
-  - **Draft Mode**: Hide draft posts in production, visible in development.
-  - **Publication Date Filtering**: Schedule posts with future dates.
-  - **Customizable CTA**: Add call-to-action blocks at the end of posts.
-  - **Per-Post Controls**: Toggle CTA and comments individually per post.
-- **💬 Comments System**:
-  - **GitHub Discussions**: Powered by Giscus for privacy-friendly comments.
-  - **Fully Customizable**: Configure theme, language, and behavior.
-  - **Per-Post Toggle**: Enable/disable comments on individual posts.
-- **🔍 Advanced Search**: Fast, client-side search across all post titles and descriptions.
-- **📊 Robust SEO**:
-  - **JSON-LD Support**: Automatic structured data for WebSite, BlogPosting, Person, and Breadcrumbs.
-  - **Canonical URLs**: Built-in support for canonical links and robots meta tags.
-  - **Dynamic OG Images**: Automatically generated social preview images for every post.
-  - **RSS Feed & Sitemap**: Ready-to-use RSS and sitemap generation.
-- **✍️ Enhanced Markdown**:
-  - **Shiki Syntax Highlighting**: Includes line highlights, diffs, and word highlighting.
-  - **Auto-generated TOC**: Interactive table of contents with scroll spying.
-  - **Heading Anchor Links**: Clickable links for sharing specific sections.
-  - **Mermaid Diagrams**: Support for flowcharts and diagrams directly in markdown.
-  - **Emoji Support**: Native emoji shortcodes (`:rocket:`, etc.).
-  - **Multi-language Support**: Link posts to their translated versions (e.g. English <-> Russian) with automatic flag indicators.
-- **🧹 Modular Architecture**: Well-organized components and content collections.
+- **🚀 고성능**: Astro 기반으로 최소한의 JavaScript와 빠른 로딩 속도 제공
+- **⚡ 최적화**:
+  - **Partytown**: Google Analytics를 웹 워커로 오프로드
+  - **로딩 인디케이터**: 부드러운 페이지 전환 프로그레스 바
+- **🎨 모던 디자인**: 다크 모드 지원 및 유동적 타이포그래피
+- **Svelte 5 Runes**: 최신 Svelte 반응성 시스템 (`$state`, `$derived`, `$props`) 활용
+- **Tailwind CSS 4**: 고성능 제로 런타임 CSS 프레임워크
+- **📝 블로그**:
+  - **MDX 지원**: 포스트 내에 Svelte 컴포넌트 직접 삽입
+  - **시리즈 지원**: 관련 포스트를 시리즈로 묶어 자동 네비게이션
+  - **초안 모드**: 프로덕션에서 초안 숨김, 개발 환경에서만 표시
+  - **예약 발행**: 미래 날짜로 포스트 발행 예약
+  - **커스텀 CTA**: 포스트 하단에 콜투액션 블록 추가
+  - **포스트별 설정**: CTA 및 댓글 개별 토글
+- **💬 댓글 시스템**:
+  - **GitHub Discussions**: Giscus 기반 프라이버시 친화적 댓글
+  - **완전 커스터마이징**: 테마, 언어, 동작 방식 설정 가능
+  - **포스트별 토글**: 개별 포스트에서 댓글 활성화/비활성화
+- **🔍 검색**: 포스트 제목 및 설명 기반 빠른 클라이언트 사이드 검색
+- **📊 SEO**:
+  - **JSON-LD**: WebSite, BlogPosting, Person, Breadcrumbs 구조화 데이터 자동 생성
+  - **캐노니컬 URL**: 캐노니컬 링크 및 robots 메타 태그 지원
+  - **동적 OG 이미지**: 포스트별 소셜 미리보기 이미지 자동 생성
+  - **RSS 피드 & 사이트맵**: 바로 사용 가능한 RSS 및 사이트맵
+- **✍️ 마크다운**:
+  - **Shiki 구문 강조**: 라인 하이라이트, diff, 단어 강조 지원
+  - **자동 목차(TOC)**: 스크롤 스파이 기능이 있는 인터랙티브 목차
+  - **헤딩 앵커 링크**: 특정 섹션 공유를 위한 클릭 가능한 링크
+  - **Mermaid 다이어그램**: 마크다운 내 플로우차트 및 다이어그램 지원
+  - **이모지 지원**: 네이티브 이모지 숏코드 (`:rocket:` 등)
+- **🧹 모듈식 아키텍처**: 잘 정리된 컴포넌트 및 컨텐츠 컬렉션
 
-## 🛠️ Tech Stack
+## 🛠️ 기술 스택
 
-- **Framework**: [Astro 5](https://astro.build/)
-- **UI Components**: [Svelte 5](https://svelte.dev/)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Content**: Markdown & MDX
-- **Optimization**: Sharp, Shiki, Partytown
-- **Icons**: Lucide & custom SVGs
+- **프레임워크**: [Astro 5](https://astro.build/)
+- **UI 컴포넌트**: [Svelte 5](https://svelte.dev/)
+- **스타일링**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **컨텐츠**: Markdown & MDX
+- **최적화**: Sharp, Shiki, Partytown
+- **아이콘**: Lucide & custom SVGs
 
-## 🚀 Getting Started
+## 🚀 시작하기
 
-### Prerequisites
+### 사전 요구사항
 
-- [Node.js](https://nodejs.org/) (LTS recommended)
-- [pnpm](https://pnpm.io/) (This project is configured for pnpm)
+- [Node.js](https://nodejs.org/) (LTS 권장)
+- [pnpm](https://pnpm.io/)
 
-### Installation
+### 설치
 
-1. Clone the repository:
+1. 저장소 클론:
 
    ```bash
-   git clone https://github.com/alec-c4/spaceship.git
-   cd spaceship
+   git clone https://github.com/rosie-pluglink/rosie-pluglink.github.io.git
+   cd rosie-pluglink.github.io
    ```
 
-2. Install dependencies:
+2. 의존성 설치:
 
    ```bash
    pnpm install
    ```
 
-3. Start the development server:
+3. 개발 서버 실행:
 
    ```bash
    pnpm dev
    ```
 
-4. Build for production:
+4. 프로덕션 빌드:
    ```bash
    pnpm build
    ```
 
-## 📂 Project Structure
+## 📂 프로젝트 구조
 
-Spaceship uses an **"Updatable Content"** architecture. All your personal data is separated from the core template code, allowing you to update the engine easily.
+컨텐츠와 엔진 코드를 분리하는 구조로, 엔진 업데이트 시 컨텐츠를 유지할 수 있습니다.
 
 ```text
 /
-├── site/              # 🟢 YOUR DATA (Keep this!)
-│   ├── assets/        # Your personal images (favicon, profile)
-│   ├── content/       # Your posts, projects, and bio
-│   └── config.ts      # Your site configuration
-├── src/               # ⚙️ Core Engine (Updateable)
-│   ├── components/    # UI components
-│   ├── layouts/       # Page templates
-│   ├── lib/           # Logic and utilities
-│   └── pages/         # Routes
-├── public/            # Static files
-├── astro.config.mjs   # Astro settings
+├── site/              # 🟢 컨텐츠 & 설정 (유지)
+│   ├── assets/        # 이미지, 파비콘 등 에셋
+│   ├── content/       # 포스트, 프로젝트
+│   └── config.ts      # 사이트 설정
+├── src/               # ⚙️ 코어 엔진
+│   ├── components/    # UI 컴포넌트
+│   ├── layouts/       # 페이지 템플릿
+│   ├── lib/           # 유틸리티
+│   └── pages/         # 라우트
+├── public/            # 정적 파일
+├── astro.config.mjs   # Astro 설정
 └── package.json
 ```
 
-## 📖 Content Management
+## 📖 컨텐츠 관리
 
-### ✍️ Adding Content
+### ✍️ 컨텐츠 추가
 
-Manage your content in `site/content/`.
+`site/content/` 디렉토리에서 관리합니다.
 
-- **Posts**: `site/content/posts/`
-- **Projects**: `site/content/projects/`
-- **About**: `site/content/about/index.md` (Your CV/Bio)
+- **포스트**: `site/content/posts/`
+- **소개**: `site/content/about/index.md`
 
-### 📝 Creating Content
+### 🔧 설정
 
-Spaceship includes tools to make content creation faster:
-
-- **VS Code Snippets**: Open any markdown file and type `post`, `project`, or `appearance` then press **Tab** to generate the frontmatter automatically.
-- **Templates**: Reference files named `_template.md` are available in each content folder as examples.
-- **Dev Container**: A pre-configured development environment is included (`.devcontainer/`) with all necessary extensions and tools.
-
-### 🔧 Configuration
-
-All site-wide settings are in `site/config.ts`:
+전체 사이트 설정은 `site/config.ts`에서 관리합니다:
 
 ```typescript
 export const SITE = {
-  author: 'Your Name',
-  title: 'Your Blog',
-  desc: 'Your description',
-  website: 'https://yourdomain.com',
+  author: 'PLUGLINK',
+  title: 'PLUGLINK Tech',
+  desc: '플러그링크 기술 블로그',
+  website: 'https://rosie-pluglink.github.io',
 
-  // Homepage configuration
-  featuredPostsCount: 1, // Number of featured posts to show
-  latestPostsCount: 3, // Number of latest posts to show
+  // 홈페이지 설정
+  featuredPostsCount: 1, // 추천 포스트 수
+  latestPostsCount: 3, // 최신 포스트 수
 
-  // CTA block configuration
+  // CTA 블록 설정
   cta: {
     enabled: true,
-    filePath: 'site/cta.md', // Markdown file with CTA content
+    filePath: 'site/cta.md',
   },
 
-  // Comments configuration (GitHub Discussions via Giscus)
+  // 댓글 설정 (GitHub Discussions / Giscus)
   comments: {
-    enabled: false, // Set to true after configuring
+    enabled: false,
     repo: 'username/repo',
-    repoId: '', // Get from https://giscus.app
-    categoryId: '', // Get from https://giscus.app
-    // ... more options
+    repoId: '', // https://giscus.app 에서 발급
+    categoryId: '', // https://giscus.app 에서 발급
   },
 
-  // Analytics
-  googleAnalyticsId: 'G-XXXXXXXXXX', // Offloaded via Partytown
+  // 애널리틱스
+  googleAnalyticsId: 'G-XXXXXXXXXX',
 };
 ```
 
-## 📚 Documentation
+## ☁️ 배포
 
-Comprehensive guides are available as blog posts in your installation:
+기본적으로 정적 사이트(SSG)이며, **GitHub Pages**에 배포되어 있습니다.
 
-- **[How to Publish Posts](docs/how-to-publish-posts.md)** - Complete guide to creating posts, frontmatter options, images, and advanced features
-- **[Configuring Spaceship](docs/configuring-spaceship.md)** - All configuration options, deployment, and customization
-
-### Quick Links
-
-- **Creating Posts**: `site/content/posts/your-post.md`
-- **Adding Projects**: `site/content/projects/your-project.md`
-- **Customizing CTA**: Edit `site/cta.md`
-- **Configuring Comments**: Get settings from [giscus.app](https://giscus.app)
-- **Analytics**: Add your GA4 ID to `site/config.ts`
-
-## ☁️ Deployment
-
-Spaceship is a static site by default (SSG), but can be easily converted to SSR using Astro Adapters.
-
-### Static Hosting (Recommended)
-
-You can deploy to **Vercel**, **Netlify**, **Cloudflare Pages**, or **GitHub Pages** without any extra configuration. Just push your code.
-
-### SSR & Advanced Features
-
-If you need dynamic features, install the appropriate adapter:
+동적 기능이 필요한 경우 Astro 어댑터를 설치합니다:
 
 - **Vercel**: `pnpm astro add vercel`
 - **Netlify**: `pnpm astro add netlify`
 - **Cloudflare**: `pnpm astro add cloudflare`
-- **Node.js**: `pnpm astro add node` (For VPS/Docker)
 
-More details: [Astro Deployment Guide](https://docs.astro.build/en/guides/deploy/)
-
-## � Updating
-
-Spaceship is designed with a "core vs content" separation. This makes updating to new versions straightforward:
-
-1. **Keep your `site/` folder**: This contains all your posts, projects, assets, and configuration.
-2. **Download the latest version** of Spaceship.
-3. **Replace the core files** in your project with the new ones:
-   - `src/` (The engine)
-   - `public/` (Static assets shell)
-   - `astro.config.mjs` (Main configuration)
-   - `package.json` & `pnpm-lock.yaml` (Dependencies)
-   - `tsconfig.json` (Tooling config)
-4. **Run `pnpm install`** to update dependencies.
-5. **Verify**: Your content in `site/` will automatically be picked up by the new engine.
-
-## �📜 License
-
-MIT License © [Alexey Poimtsev](https://github.com/alec-c4)
+자세한 내용: [Astro 배포 가이드](https://docs.astro.build/en/guides/deploy/)
