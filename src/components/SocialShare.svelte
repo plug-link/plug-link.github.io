@@ -6,25 +6,10 @@
 
   let { title, urlPath }: Props = $props();
   let copied = $state(false);
-  let instaCopied = $state(false);
 
   const getFullUrl = () => {
     if (typeof window === 'undefined') return '';
     return `${window.location.origin}${urlPath}`;
-  };
-
-  const shareToInstagram = async () => {
-    const url = getFullUrl();
-    try {
-      await navigator.clipboard.writeText(url);
-      instaCopied = true;
-      setTimeout(() => {
-        instaCopied = false;
-        window.open('https://www.instagram.com', '_blank');
-      }, 800);
-    } catch {
-      window.open('https://www.instagram.com', '_blank');
-    }
   };
 
   const copyToClipboard = async () => {
@@ -47,7 +32,9 @@
     },
     {
       name: '카카오톡',
-      paths: ['M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'],
+      paths: [
+        'M12 3C6.5 3 2 6.8 2 11.5c0 2.7 1.5 5.1 3.8 6.7L5 22l4.2-2.1c.9.2 1.8.3 2.8.3 5.5 0 10-3.8 10-8.7S17.5 3 12 3z',
+      ],
       getShareUrl: (t: string, u: string) =>
         `https://sharer.kakao.com/talk/friends/picker/link?shareUrl=${encodeURIComponent(u)}&title=${encodeURIComponent(t)}`,
     },
@@ -70,30 +57,6 @@
   </h3>
 
   <div class="flex items-center gap-2 flex-wrap">
-    <!-- Instagram: 링크 복사 후 인스타 열기 -->
-    <button
-      onclick={shareToInstagram}
-      class="p-2.5 rounded-xl border border-border hover:bg-accent text-muted-foreground hover:text-primary transition-all duration-300 relative"
-      aria-label="인스타그램에 공유"
-      title={instaCopied ? '링크 복사됨!' : '인스타그램'}
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-      </svg>
-    </button>
-
     <!-- Facebook, KakaoTalk, LinkedIn -->
     {#each platforms as platform (platform.name)}
       <a
