@@ -21,13 +21,13 @@ const categories = [
     icon: 'code',
     count: posts.filter((p) => p.data.tags.includes('engineering')).length,
   },
-  {
-    name: 'Design',
-    tag: 'design',
-    desc: '사용자 경험과 인터페이스 디자인에 대한 이야기',
-    icon: 'palette',
-    count: posts.filter((p) => p.data.tags.includes('design')).length,
-  },
+  // {
+  //   name: 'Design',
+  //   tag: 'design',
+  //   desc: '사용자 경험과 인터페이스 디자인에 대한 이야기',
+  //   icon: 'palette',
+  //   count: posts.filter((p) => p.data.tags.includes('design')).length,
+  // },
   {
     name: 'Product',
     tag: 'product',
@@ -56,11 +56,11 @@ const categories = [
       <h1
         class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-foreground leading-[1.08] mb-6"
       >
-        기술이 세상을<br />
-        <span class="text-pluglink-blue">연결</span>하는 방법
+        충전 경험을 바꾸는<br />
+        <span class="text-pluglink-blue">기술</span>의 기록
       </h1>
       <p class="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-        플러그링크 팀이 서비스를 만들며 겪은 기술적 도전과 해결 과정, 그리고 팀의 성장 이야기를
+        불편한 전기차 충전 일상에 물음표를 던지고, 기술로 답을 찾아가는 플러그링크 팀의 이야기를
         공유합니다.
       </p>
     </div>
@@ -68,7 +68,7 @@ const categories = [
 
   <!-- Category Cards - toss.tech style -->
   <section class="mb-20 sm:mb-28">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
       {
         categories.map((cat) => (
           <a
@@ -323,9 +323,18 @@ const categories = [
       class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-pluglink-blue to-blue-600 p-5 sm:p-6"
     >
       <div class="relative z-10">
-        <h2 class="text-xl sm:text-2xl font-black text-white mb-3">플러그링크와 함께 성장하세요</h2>
-        <p class="text-blue-100 text-sm sm:text-base mb-6 max-w-lg leading-relaxed">
-          혁신적인 기술로 세상을 연결하는 플러그링크에서 함께할 동료를 찾고 있습니다.
+        <h2 class="text-xl sm:text-2xl font-black text-white mb-3">
+          플러그링크와 함께 할 동료를 찾습니다
+        </h2>
+        <p class="text-white font-bold text-lg sm:text-xl leading-snug mb-1">
+          누적 투자 1,000억 원 이상
+        </p>
+        <p class="text-white font-bold text-lg sm:text-xl leading-snug mb-4">
+          완속 충전인프라 연간 등록 증가 1위 <span
+            class="text-blue-200/60 text-xs font-normal align-middle">2025년 기준</span>
+        </p>
+        <p class="text-blue-100 text-sm mb-6 max-w-lg leading-relaxed">
+          가장 빠르게 성장하는 전기차 충전 플랫폼을 함께 만들어갈 동료를 기다립니다.
         </p>
         <a
           href="https://team.pluglink.kr"

@@ -31,14 +31,6 @@
         `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(u)}`,
     },
     {
-      name: '카카오톡',
-      paths: [
-        'M12 3C6.5 3 2 6.8 2 11.5c0 2.7 1.5 5.1 3.8 6.7L5 22l4.2-2.1c.9.2 1.8.3 2.8.3 5.5 0 10-3.8 10-8.7S17.5 3 12 3z',
-      ],
-      getShareUrl: (t: string, u: string) =>
-        `https://sharer.kakao.com/talk/friends/picker/link?shareUrl=${encodeURIComponent(u)}&title=${encodeURIComponent(t)}`,
-    },
-    {
       name: '링크드인',
       paths: [
         'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z',
@@ -57,7 +49,32 @@
   </h3>
 
   <div class="flex items-center gap-2 flex-wrap">
-    <!-- Facebook, KakaoTalk, LinkedIn -->
+    <!-- Copy Link -->
+    <button
+      onclick={copyToClipboard}
+      class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-border hover:bg-accent text-muted-foreground hover:text-primary transition-all duration-300"
+      aria-label="Copy link"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+      </svg>
+      <span class="text-xs font-bold uppercase tracking-widest">
+        {copied ? 'Copied!' : 'Copy Link'}
+      </span>
+    </button>
+
+    <!-- Facebook, LinkedIn -->
     {#each platforms as platform (platform.name)}
       <a
         href={platform.getShareUrl(title, getFullUrl())}
@@ -84,30 +101,5 @@
         </svg>
       </a>
     {/each}
-
-    <!-- Copy Link -->
-    <button
-      onclick={copyToClipboard}
-      class="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-border hover:bg-accent text-muted-foreground hover:text-primary transition-all duration-300"
-      aria-label="Copy link"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-      </svg>
-      <span class="text-xs font-bold uppercase tracking-widest">
-        {copied ? 'Copied!' : 'Copy Link'}
-      </span>
-    </button>
   </div>
 </div>
